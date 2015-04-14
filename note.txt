@@ -1,0 +1,1 @@
+End point: ws://localhost:8025/photohangout/websocket

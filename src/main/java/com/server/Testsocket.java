@@ -13,11 +13,10 @@ import javax.websocket.Session;
 import javax.websocket.CloseReason.CloseCodes;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
-
-import com.server.WebsocketConfigurator;
+import javax.inject.Singleton;
  
-@ServerEndpoint(value = "/websocket/{group-id}", configurator = WebsocketConfigurator.class)
-public class Websocket {
+@Singleton @ServerEndpoint(value = "/websocket")
+public class Testsocket {
 	HashMap<String, HashSet<Session>> groupIdToSessionsMap = new HashMap<String,HashSet<Session>>();
     private Logger logger = Logger.getLogger(this.getClass().getName());
  
@@ -77,3 +76,4 @@ public class Websocket {
         System.out.println(groupIdToSessionsMap.size() + "groups");
     }
 }
+
