@@ -48,6 +48,7 @@ public class Websocket {
         HashSet<Session> groupSessionBelongs = groupIdToSessionsMap.get(groupId);
         for(Session s : groupSessionBelongs) {
         	try {
+        		
 				s.getBasicRemote().sendText(message);
 			} catch (IOException e) {
 				//error case

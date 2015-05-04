@@ -14,7 +14,7 @@ public class WebsocketServer {
     }
  
     public static void runServer() {
-        Server server = new Server("localhost", 8030, "/photohangout", Websocket.class);
+        Server server = new Server("0.0.0.0", 8030, "/photohangout", Websocket.class);
         try {
             server.start();
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
